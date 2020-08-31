@@ -111,7 +111,7 @@ class Avram::Migrator::Runner
     <<-SQL
     CREATE TABLE IF NOT EXISTS #{MIGRATIONS_TABLE_NAME} (
       id serial PRIMARY KEY,
-      version bigint NOT NULL
+      version bigint NOT NULL UNIQUE
     )
     SQL
   end
